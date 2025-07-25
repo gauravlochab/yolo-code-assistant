@@ -16,11 +16,11 @@ else:
 sys.path.insert(0, str(parent_dir))
 
 # Import necessary components from the main project
-from src.yolo_assistant.generation.openrouter_client import OpenRouterClient
-from src.yolo_assistant.retrieval.search import CodeSearcher
-from src.yolo_assistant.storage.vector_store import MongoDBVectorStore
-from src.yolo_assistant.indexer.embedder import CodeEmbedder
-from src.yolo_assistant.config import config
+from src.generation.openrouter_client import OpenRouterClient
+from src.retrieval.search import CodeSearcher
+from src.storage.vector_store import MongoDBVectorStore
+from src.indexer.embedder import CodeEmbedder
+from src.config import config
 
 # Load environment variables
 load_dotenv()
