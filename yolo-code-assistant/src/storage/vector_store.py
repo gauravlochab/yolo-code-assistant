@@ -9,6 +9,7 @@ import time
 from ..config import config
 from ..types import (
     CodeChunk,
+    ChunkType,
     YOLOAssistantError,
 )
 from .mongodb_client import MongoDBClient
