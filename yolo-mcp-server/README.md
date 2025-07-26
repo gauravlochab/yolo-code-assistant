@@ -24,7 +24,7 @@ This MCP server provides four specialized tools for YOLO development:
 ### 1. Clone and Navigate to Directory
 
 ```bash
-cd /Users/gauravlochab/YOLO-RAG/yolo-mcp-server
+cd <repo-path>
 ```
 
 ### 2. Create Environment File
@@ -137,7 +137,7 @@ Once integrated with Claude Desktop, you can use the tools like this:
 
 The server expects your directory structure as:
 ```
-YOLO-RAG/
+yolo-code-assistant/
 ├── yolo-code-assistant/
 │   └── src/
 └── yolo-mcp-server/
@@ -152,4 +152,40 @@ To modify the server:
 2. Test changes with `uv run python mcp_server.py`
 3. Restart Claude Desktop to load changes
 
+## Sharing with Others
 
+**IMPORTANT:** Never share your MongoDB URI or API keys directly!
+
+To share this project with others:
+
+1. **Direct them to use the template:**
+   ```bash
+   cp .env.template .env
+   # Then edit .env with their own credentials
+   ```
+
+2. **Tell them what they need:**
+   - MongoDB Atlas account (free tier works)
+   - OpenRouter API key
+   - The database is already indexed with YOLO code
+
+3. **Share these details only:**
+   - Repository URL
+   - Database name: `yolo_assistant` (if needed)
+   - Collection name: `code_chunks` (if needed)
+
+4. **For detailed security practices:**
+   See `SHARING_MONGODB_ACCESS.md` for comprehensive security guidelines
+
+### Quick Setup Message Template
+```
+To use the YOLO Code Assistant MCP Server:
+
+1. Clone: https://github.com/yourusername/yolo-code-assistant
+2. Get MongoDB Atlas account: https://www.mongodb.com/cloud/atlas
+3. Get OpenRouter API key: https://openrouter.ai/
+4. Setup: cp .env.template .env (then add your credentials)
+5. Run: uv sync && uv run python mcp_server.py
+
+The MongoDB database already contains indexed YOLO documentation!
+```
