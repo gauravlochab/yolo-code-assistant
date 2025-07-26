@@ -22,8 +22,7 @@ class TreeSitterParser(Chunker):
         """Initialize the Tree-sitter parser."""
         try:
             self.language = Language(tspython.language())
-            self.parser = Parser()
-            self.parser.set_language(self.language)
+            self.parser = Parser(self.language)
         except Exception as e:
             raise ChunkingError(f"Failed to initialize Tree-sitter parser: {e}")
 

@@ -20,6 +20,9 @@ class OpenRouterClient:
         self.api_key = api_key or config.openrouter_api_key
         self.model = model or config.llm_model
         
+        # Using mistral-7b-instruct:free - highest quality completely free model on OpenRouter as of Jan 2024
+        # Provides good instruction following and technical Q&A capabilities while maintaining zero cost
+        
         # Initialize OpenAI client with OpenRouter endpoint
         self.client = OpenAI(
             base_url=config.openrouter_base_url,

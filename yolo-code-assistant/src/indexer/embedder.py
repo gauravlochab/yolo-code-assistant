@@ -181,6 +181,8 @@ class CodeEmbedder:
             documents = []
             for chunk, embedding in zip(chunks, embeddings):
                 doc = asdict(chunk)
+                # Convert enum to string for MongoDB storage
+                doc['chunk_type'] = doc['chunk_type'].name
                 doc['embedding'] = embedding
                 documents.append(doc)
                 

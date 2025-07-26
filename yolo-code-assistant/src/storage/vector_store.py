@@ -73,6 +73,13 @@ class MongoDBVectorStore(MongoDBClient):
         try:
             self.ensure_connected()
             
+            # Ensure collection exists by inserting and removing a dummy document
+            if self.count_documents() == 0:
+                print("Creating collection...")
+                dummy_id = self.collection.insert_one({"_dummy": True}).inserted_id
+                self.collection.delete_one({"_id": dummy_id})
+                print("Collection created.")
+            
             index_definition = {
                 "name": self.vector_index_name,
                 "type": "vectorSearch",
