@@ -13,8 +13,11 @@ This project implements a sophisticated code search and question-answering syste
 
 ## 📸 Demo
 
-![YOLO Code Assistant Demo](docs/demo-screenshot.png)
-*Chat interface showing code retrieval and answer generation*
+![YOLO Code Assistant Demo - ONNX Export](docs/demo-screenshot-1.png)
+*Chat interface showing how to export YOLO models to ONNX format*
+
+![YOLO Code Assistant Demo - Model Evaluation](docs/demo-screenshot-2.png)
+*Chat interface showing how to evaluate YOLOv5 model performance*
 
 ## 🚀 Quick Start
 
