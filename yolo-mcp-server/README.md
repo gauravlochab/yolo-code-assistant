@@ -135,12 +135,11 @@ Once integrated with Claude Desktop, you can use the tools like this:
 
 ### Import Errors
 
-The server expects the `yolo-code-assistant` project to be in the parent directory. Ensure your directory structure is:
+The server expects your directory structure as:
 ```
 YOLO-RAG/
 ├── yolo-code-assistant/
 │   └── src/
-│       └── yolo_assistant/
 └── yolo-mcp-server/
     └── mcp_server.py
 ```
@@ -153,15 +152,4 @@ To modify the server:
 2. Test changes with `uv run python mcp_server.py`
 3. Restart Claude Desktop to load changes
 
-## Security Notes
 
-- Never commit your `.env` file to version control
-- Keep your MongoDB URI and OpenRouter API key secure
-- The server only has read access to your indexed codebase
-
-## Support
-
-For issues with:
-- **MCP Server**: Check this README and the code
-- **YOLO Assistant**: See the main `yolo-code-assistant` project
-- **Claude Desktop**: Refer to Anthropic's documentation
