@@ -325,29 +325,6 @@ These features are essential for production but omitted due to time constraints:
    - Impact: Vulnerable to prompt injection or malicious queries
    - Solution: Input sanitization, query validation, response filtering
 
-### Advanced Capabilities
-
-1. **Code Understanding**:
-   - AST-based analysis
-   - Call graph navigation
-   - Dependency tracking
-
-2. **Enhanced Search**:
-   - Hybrid search (vector + keyword)
-   - Faceted filtering
-   - Fuzzy matching
-
-3. **Integration**:
-   - VSCode extension
-   - GitHub bot
-   - CI/CD pipeline integration
-
-## 🧪 Testing
-
-Run the test notebooks in order:
-1. `notebooks/01_indexing_exploration.ipynb` - Test indexing pipeline
-2. `notebooks/02_embedding_evaluation.ipynb` - Evaluate embedding quality
-3. `notebooks/03_retrieval_testing.ipynb` - Test retrieval accuracy
 
 ## 📊 Performance Metrics
 
